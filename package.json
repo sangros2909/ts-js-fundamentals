@@ -1,0 +1,25 @@
+{
+  "name": "ts-js-fundamentals",
+  "version": "1.0.0",
+  "description": "Typescript / Javascript Fundamental Examples",
+  "homepage": "https://github.com/sangros2909/ts-js-fundamentals#readme",
+  "bugs": {
+    "url": "https://github.com/sangros2909/ts-js-fundamentals/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangros2909/ts-js-fundamentals.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "ts-node-dev --respawn --transpile-only src"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
