@@ -19,7 +19,7 @@ export interface CharacterData {
   powers: string[];
   isVillain: boolean;
   baseOfOperations: string;
-  stats: BattleStats;
+  stats?: BattleStats;
   matchups: MatchupOdds[];
 }
 
@@ -129,6 +129,16 @@ export class MockDCAPI {
         },
       ],
     },
+    {
+      id: 4,
+      name: "David Sangros",
+      firstAppearance: "",
+      aliases: [],
+      powers: [],
+      isVillain: true,
+      baseOfOperations: "Reigate, UK",
+      matchups: []
+    },
   ];
 
   public addCharacter(characterData: CharacterData): void {
@@ -147,11 +157,11 @@ export class MockDCAPI {
     }
   }
 
-  public getBooks(): CharacterData[] {
+  public getCharacters(): CharacterData[] {
     return this._dcCharacterAPI;
   }
 
-  public getBook(id: number): CharacterData | undefined {
+  public getCharacter(id: number): CharacterData | undefined {
     return this._dcCharacterAPI.find((d) => d.id === id);
   }
 }
